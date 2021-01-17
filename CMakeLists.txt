@@ -10,6 +10,7 @@ pkg_check_modules(VTE REQUIRED IMPORTED_TARGET vte-2.91)
 
 add_executable(inxaneterm
     "src/main.cc"
+    "src/main_window.cc"
 )
 
 target_include_directories(inxaneterm PRIVATE "./src/")
