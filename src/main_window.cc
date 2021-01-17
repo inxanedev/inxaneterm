@@ -28,16 +28,8 @@ MainWindow::MainWindow(gdouble scale) {
         nullptr,
         nullptr
     );
-	int width, height;
-	get_size(width, height);
-
-	vte_terminal_set_size(
-		term,
-		width / vte_terminal_get_char_width(term),
-		height / vte_terminal_get_char_height(term)
-	);
+    
 	vte_terminal_set_font_scale(term, scale);
-
 
 	gtk_widget_set_vexpand(terminal, true);
     gtk_widget_set_halign(terminal, GTK_ALIGN_FILL);
