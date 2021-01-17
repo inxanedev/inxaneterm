@@ -13,8 +13,7 @@ MainWindow::MainWindow(gdouble scale) {
 	char* startterm[2] = {0, 0};
 	startterm[0] = vte_get_user_shell();
 	
-    //vte_terminal_spawn_async(VteTerminal *terminal, VtePtyFlags pty_flags, const char *working_directory, char **argv, char **envv, GSpawnFlags spawn_flags_, GSpawnChildSetupFunc child_setup, gpointer child_setup_data, GDestroyNotify child_setup_data_destroy, int timeout, GCancellable *cancellable, VteTerminalSpawnAsyncCallback callback, gpointer user_data)
-	VteTerminal* term = VTE_TERMINAL(terminal);	
+    VteTerminal* term = VTE_TERMINAL(terminal);	
 	vte_terminal_spawn_sync(
 		term,
 		VTE_PTY_DEFAULT,
@@ -38,7 +37,5 @@ MainWindow::MainWindow(gdouble scale) {
     vbox->add(*Glib::wrap(terminal));
     vbox->show_all();
 }
-
-MainWindow::~MainWindow() {}
 
 

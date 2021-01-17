@@ -4,5 +4,4 @@
 class MainWindow : public Gtk::Window {
     public:
         MainWindow(gdouble scale);
-        virtual ~MainWindow();
 };
